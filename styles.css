@@ -6,16 +6,11 @@
 }
 
 body {
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(img/pexels-kristina-paukshtite-1146760.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pexels-kristina-paukshtite-1146760.jpg);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     line-height: 1.5;
-
-    /* text-align: center; */
-}
-#hero{
-    min-height: 100vh;
 }
 .content {
     display: flex;
@@ -23,42 +18,97 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    margin-top: 1.5em;
 }
+
 .content h1 {
     color: #fff;
     font-size: 2.5em;
     letter-spacing: 1px;
-    margin-top: 1.5em;
 }
+
 .content p {
     color: #fff;
     font-size: 18px;
-    margin: 1em 0;
+    margin: 1em 2%;
 }
 
-.btn-container{
-    width: 500px;
-    height: auto;
+.btn-container {
+    width: 400px;
+    max-width: 100%;
     display: inline-flex;
-    flex-direction: row;
-}
+    flex-direction: row; 
+    margin: 1.5rem 3%;
+   
+  }
 
 .btn-container button {
     width: 100%;
-    margin-right: 2em;
     display: block;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 30px;
-    border: transparent;
     outline: none;
+    border: none;
     padding: 1rem 1rem;
     font-size: 17px;
     font-weight: 500;
 }
+.btn-container button:first-child{
+    margin-right: 1.5em;
+}
+.btn-container button:first-child:hover {
+    background-color: #e73d0c;
+    color: #fff;
+    border: transparent;
+}
 
-.btn-container button:nth-child(2) {
+.btn-container button+button {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
+}
+
+.btn-container button+button:hover {
+    background-color: #e73d0c;
+    color: #fff;
+    border: 2px solid #e73d0c;
+}
+
+.content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.content a span {
+    text-decoration: underline;
+}
+
+.icon-container img {
+    filter: brightness(0) invert(1);
+    width: 50px;
+    height: auto;
+  }
+  
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: center;
+    margin:2em 2% 2em;
+    
+}
+
+.card {
+    text-align: center;
+    padding: 3em;
+    background-color: #e73d0c;
+    margin: 3%;
+    
+  }
+  .card-container .card h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
